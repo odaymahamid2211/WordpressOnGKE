@@ -1,16 +1,16 @@
 # WordpressOnGKE
 ## for Run 
 
-initialize the terraform by executing:
+1. Initialize the terraform by executing:
     
     Terraform init
 
-See what will build by executing:
+2. See what will build by executing:
 
    
     Terraform plan
     
  
-3.apply the config by executing:
+3. Apply the config by executing:
 
     Terraform apply
