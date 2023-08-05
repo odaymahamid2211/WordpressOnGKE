@@ -1,19 +1,17 @@
-# WordpressOnGKE
-## for Run 
+# deploy Wordpress on GKE 
+## Run 
 
-1. Initialize the terraform by executing:
+Initialize the terraform by executing:
 
     Terraform init
 
-2. See what will build by executing:
-
-
+See what will build by executing:
 
     Terraform plan
-    
- 
-3. Apply the config by executing:
 
-    
+Apply the config by executing:
 
     Terraform apply
+
+## Task steps
+
