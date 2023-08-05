@@ -180,7 +180,7 @@ resource "kubernetes_ingress_v1" "wordpress" {
     annotations = {
       "kubernetes.io/ingress.class" = "gce"
       "kubernetes.io/ingress.global-static-ip-name" = google_compute_global_address.default.name
-      "kubernetes.io/ingress.allow-http"          = "true"
+      "kubernetes.io/ingress.allow-http"          = "false"
       "ingress.gcp.kubernetes.io/pre-shared-cert"   = google_compute_managed_ssl_certificate.cert.name
        "nginx.ingress.kubernetes.io/backend-protocol" = "HTTP"
        "nginx.ingress.kubernetes.io/force-ssl-redirect" = "true"
@@ -188,6 +188,7 @@ resource "kubernetes_ingress_v1" "wordpress" {
        #"cloud.google.com/backend-config" = "http-hc-config"
        "nginx.ingress.kubernetes.io/from-to-www-redirect" = "true"
        "nginx.ingress.kubernetes.io/rewrite-target" = "/"
+       "iap.ingress.kubernetes.io/enabled" = "true"
        "nginx.ingress.kubernetes.io/configuration-snippet" = <<EOF
         location /wp-login.php {
             auth_request /iap;
