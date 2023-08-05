@@ -7,8 +7,9 @@ initialize the terraform by executing:
 
 See what will build by executing:
 
-   terraform plan
+    Terraform plan
+ 
 
 3.apply the config by executing:
 
-   terraform apply
+    Terraform apply
