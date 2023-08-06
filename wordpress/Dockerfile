@@ -17,7 +17,9 @@ RUN apt-get update && \
 RUN service apache2 restart
 
 
+
 EXPOSE 80
+
 
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
