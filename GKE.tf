@@ -44,14 +44,8 @@ resource "google_container_node_pool" "node_pool" {
     auto_repair  = true
     auto_upgrade = true
   }
-  timeouts {
-    create =  "30m"
-    update =  "30m"
-    delete =  "30m"
-  }
   depends_on = [google_container_cluster.cluster]
-  lifecycle {
-  }
+
 }
 
 
