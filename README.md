@@ -1,4 +1,4 @@
-# deploy Wordpress on GKE 
+# Deploy Wordpress on GKE 
 ## Run 
 
 Initialize the terraform by executing:
