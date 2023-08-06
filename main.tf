@@ -110,9 +110,6 @@ resource "google_compute_managed_ssl_certificate" "cert" {
   managed {
     domains = [var.domain_name]
   }
-  lifecycle {
-    create_before_destroy = true
-  }
 }
 resource "google_compute_global_address" "default" {
    name          = "global-ip1"
