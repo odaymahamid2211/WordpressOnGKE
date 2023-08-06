@@ -3,8 +3,8 @@
 
 resource "google_container_cluster" "cluster" {
   project = var.project_id
-  name               = var.cluster_name
-  location               = var.zone
+  name = var.cluster_name
+  location = var.zone
   logging_service    = "logging.googleapis.com/kubernetes"
   monitoring_service = "monitoring.googleapis.com/kubernetes"
   remove_default_node_pool = true
@@ -21,14 +21,6 @@ resource "google_container_cluster" "cluster" {
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform",
     ]
-  }
-  release_channel {
-    channel = "REGULAR"
-  }
-  timeouts {
-  create = "15m"
-  update = "10m"
-  delete = "10m"
   }
 }
 resource "google_container_node_pool" "node_pool" {
@@ -116,16 +108,6 @@ resource "kubernetes_deployment" "wordpress" {
           port {
             container_port = 80
           }
-         # readiness_probe {
-            #http_get {
-               # path   = "/health-check"
-              #  port   = "80"
-             # }
-            #initial_delay_seconds = 10
-            #period_seconds        = 10
-           # timeout_seconds = 5
-            
-          #}
         }
       }
     }
