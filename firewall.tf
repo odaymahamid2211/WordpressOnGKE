@@ -1,5 +1,4 @@
 # firewall
-
 resource "google_compute_firewall" "wordpress-firewall" {
   name    = "wordpress-firewall"
   network = "default"
