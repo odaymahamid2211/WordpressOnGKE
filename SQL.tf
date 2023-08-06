@@ -1,8 +1,5 @@
-##########################
-#                        #
-#      DATABASE          #
-#
-#########################
+#      SQL DB         #
+
 resource "google_sql_database" "database" {
   name     = var.db_name
   instance = google_sql_database_instance.instance.name
