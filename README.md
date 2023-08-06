@@ -14,7 +14,7 @@ Apply the config by executing:
     Terraform apply
 
 ## Task steps
- 1. creating SQL Database and user for this DB (SQL.tf)
+ 1. Creating SQL Database and user for this DB (SQL.tf)
  2. Docker file for installing Apache, PHP, and WordPress and use it for creating the Image and pushing it using Terraform.(GKE.tf file)
  and use the image = "gcr.io/${var.project_id}/${var.app_name}:${var.wordpress_version}" in Deployment.
 
