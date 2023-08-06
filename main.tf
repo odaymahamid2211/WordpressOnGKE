@@ -103,7 +103,6 @@ resource "null_resource" "set_gcloud_project" {
 }
 
 
-
 #  ssl_certificate #
 resource "google_compute_managed_ssl_certificate" "cert" {
   name        = "oday-cert3"
