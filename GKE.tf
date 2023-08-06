@@ -60,7 +60,6 @@ resource "google_container_node_pool" "node_pool" {
    always_run = timestamp()
    }
   provisioner "local-exec" {
-   working_dir = path.module
    command     = "gcloud builds submit --tag gcr.io/${var.project_id}/${var.app_name}:${var.wordpress_version}"
    }
  }
