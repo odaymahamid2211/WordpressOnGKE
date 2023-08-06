@@ -20,7 +20,7 @@ Apply the config by executing:
 
  3. Creating service type: NodePort(GKE.tf), creating managed_ssl_certificate (main. tf), Creating ingress, and adding annotations to use the certificate and force SSL redirect.
 
- 4. Enable IAP for WordPress website by adding annotations in the Ingress section
+ 4. Enable IAP for WordPress website (GKE.tf)
 
     <img width="563" alt="Screenshot 2023-08-05 195442" src="https://github.com/odaymahamid2211/WordpressOnGKE/assets/126683590/b97dabcc-afa1-4e90-bded-17c7b27a9e26">
 
