@@ -8,9 +8,9 @@ resource "google_compute_firewall" "wordpress-firewall" {
   }
   allow {
     protocol = "tcp"
-    ports    = ["80","443", "1000-3300","22"]
+    ports    = ["80","443","22"]
   }
 
-  source_tags = ["web"]
+  source_tags = ["WP"]
   source_ranges = ["0.0.0.0/0"]
 }
