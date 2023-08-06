@@ -18,7 +18,7 @@ Apply the config by executing:
  2. Docker file for installing Apache, PHP, and WordPress and use it for creating the Image and pushing it using Terraform.(GKE.tf file)
  and use the image = "gcr.io/${var.project_id}/${var.app_name}:${var.wordpress_version}" in Deployment.
 
- 3. Creating service type: NodePort(GKE.tf), creating managed_ssl_certificate (main. tf), Creating ingress, and adding annotations to use the certificate and force SSL redirect.
+ 3. Creating service type: NodePort(GKE.tf), creating managed_ssl_certificate (main.tf), Creating ingress, and adding annotations to use the certificate and force SSL redirect.
 
  4. Enable IAP for WordPress website (GKE.tf)
 
