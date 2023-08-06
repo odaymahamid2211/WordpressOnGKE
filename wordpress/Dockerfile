@@ -10,7 +10,6 @@ RUN apt-get update && \
     chmod -R 755 /var/www/html/ && \
     cd /var/www/html/ && \
     sed -i "s/80/80/g" /etc/apache2/sites-available/ && \
-    echo "LimitRequestFieldSize 16384" >> /etc/apache2/apache2.conf && \
     rm /tmp/latest.tar.gz && \
     apt-get clean
 
