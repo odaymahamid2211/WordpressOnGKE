@@ -28,9 +28,7 @@ resource "google_sql_database_instance" "instance" {
         }
     }
     }
-  lifecycle {
-    create_before_destroy = true
-  }
+
   depends_on = [google_container_cluster.cluster]
 }
 resource "google_sql_user" "user" {
